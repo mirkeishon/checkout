@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5"/>
+
+    <link rel="icon" href="resources/devchallenges.png"/>
+
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="https://devchallenges.io/"
+      />
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>Checkout</title>
+
+  </head>
+  <body>
+    <header>
+      <h1>Checkout</h1>
+    </header>
+    
+    <div class="main-content">
+      <div class="user-form">
+        <form action="/form-validation.php">
+          <div class="form-section">
+            <h2 class="form-subtitle">Contact Information</h2>
+            <div class="form-element-container">
+              <label class="form-element-title" for="inputEmail">E-mail</label>
+              <div>
+                <span class="material-icons">email</span>
+                <input required class="form-element-input" placeholder="Enter your email..." type="email" name="email" id="inputEmail">
+                <span class="clear material-icons">clear</span>
+              </div>
+            </div>
+            <div class="form-element-container">
+              <label class="form-element-title" for="inputPhone">Phone</label>
+              <div>
+                <span class="material-icons">phone</span>
+                <input required class="form-element-input" placeholder="Enter your phone..." type="text" name="phone" id="inputPhone">
+                <span class="clear material-icons">clear</span>
+              </div>
+            </div>
+          </div>
+          <div class="form-section">
+            <h2 class="form-subtitle">Shipping address</h2>
+            <div class="form-element-container">
+              <label class="form-element-title" for="inputName">Full Name</label>
+              <div>
+                <span class="material-icons">account_circle</span>
+                <input class="form-element-input" required placeholder="Your full name..." type="text" name="name" id="inputName">
+                <span class="clear material-icons">clear</span>
+              </div>
+            </div>
+            <div class="form-element-container">
+              <label class="form-element-title" for="inputAddress">Address</label>
+              <div>
+                <span class="material-icons">home</span>
+                <input required class="form-element-input" placeholder="Your address..." type="text" name="address" id="inputAdress">
+                <span class="clear material-icons">clear</span>
+              </div>
+            </div>
+            <div class="form-element-container">
+              <label class="form-element-title" for="inputCity">City</label>
+              <div>
+                <span class="material-icons">location_city</span>
+                <input required class="form-element-input" placeholder="Your city..." type="text" name="city" id="inputCity">
+                <span class="clear material-icons">clear</span>
+              </div>
+            </div>
+            <div class="form-element-container form-element-container-double">
+              <div class="form-element-container">
+                <label class="form-element-title" for="inputCountry">Country</label>
+                <div>
+                  <span class="material-icons">public</span>
+                  <input required readonly placeholder="Your country..." type="text" class="form-element-input" name="country" id="inputCountry">
+                  <ul class="countryDropdown">
+                    <li class="dropdown-item">United States of America</li>
+                    <li class="dropdown-item">Spain</li>
+                    <li class="dropdown-item">Germany</li>
+                    <li class="dropdown-item">Canada</li>
+                    <li class="dropdown-item">Italy</li>
+                  </ul>
+                  <p class="material-icons expand">expand_more</p>
+                </div>
+              </div>
+              <div class="form-element-container">
+                <label class="form-element-title" for="inputPostal">Postal Code</label>
+                <div>
+                  <span class="material-icons">markunread_mailbox</span>
+                  <input required class="form-element-input" placeholder="Your postal code..." type="text" name="postal" id="inputPostal">
+                  <span class="clear material-icons">clear</span>
+                </div>
+              </div>
+              
+            </div>
+            <div class="form-status" style="display: none;">
+              <p>aspoidfjpahg apeiohf ph apoghpioeh aphigpeoi</p>
+            </div>
+            <div class="form-element-container remember">
+                <input class="form-element-input" type="checkbox" name="remember" id="remember">
+                <label class="form-element-title" for="remember">Save this information for next time</label>
+              </div>
+              <div class="form-element-container">
+                <input class="form-element-input submit" value="Continue" type="submit" name="submit" id="Submit">
+              </div>
+          </div>
+        </form>
+      </div>
+      <div class="cart-products">
+        <div class="products">
+          <div class="product">
+            <img src="resources/photo1.png">
+            <div class="product-details">
+              <div>
+                <h2>Vintage Backpack</h2>
+                <p class="product-new-price">&#36;54.99</p>
+                <p class="product-old-price">&#36;94.99</p>
+              </div>
+              <div class="product-quantity">
+                <span class="material-icons remove">remove</span>
+                <input class="quantity" type="text" name="quantity" value="1">
+                <span class="material-icons add">add</span>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <img src="resources/photo2.png">
+            <div class="product-details">
+              <div>
+                <h2>Levi Shoes</h2>
+                <p class="product-new-price">&#36;74.99</p>
+                <p class="product-old-price">&#36;124.99</p>
+              </div>
+              <div class="product-quantity">
+                <span class="material-icons remove">remove</span>
+                <input class="quantity" type="text" name="quantity" value="1">
+                <span class="material-icons add">add</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="final-price">
+          <div class="total">
+            <p>Shipping</p>
+            <p>&#36;19</p>
+          </div>
+          <div class="total">
+            <p>Total</p>
+            <p id="total">&#36;148.98</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <p>Created by <a href="https://github.com/mirkeishon" target="_blank">mirkeishon</a> - devChallenges</p>
+    </footer>
+    <script type="text/javascript" src="main.js"></script>
+  </body>
+</html>
